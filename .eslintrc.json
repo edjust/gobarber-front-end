@@ -19,8 +19,12 @@
     },
     "plugins": ["react", "@typescript-eslint", "react-hooks", "prettier"],
     "rules": {
+        "prettier/prettier": "error",
+        "react/prop-types": "off",
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-props-no-spreading": "off",
         "react/jsx-filename-extension": [
             1,
             {
@@ -28,8 +32,9 @@
             }
         ],
         "no-use-before-define": "off",
-        "@typescript-eslint/no-use-before-define": ["error"],
-        "react/react-in-jsx-scope": "off",
+        "no-console": "off",
+        "import/prefer-default-export": "off",
+        "import/no-duplicates": "off",
         "import/extensions": [
             "error",
             "ignorePackages",
@@ -38,8 +43,10 @@
                 "tsx": "never"
             }
         ],
-        "prettier/prettier": "error",
-        "react/jsx-props-no-spreading": "off"
+        "@typescript-eslint/no-use-before-define": ["error"],
+        "@typescript-eslint/ban-types": "off",
+        "@typescript-eslint/camelcase": "off", // Não funciona -> Solução: /node_modules/eslint-config-airbnb-base/rules/style.js
+        "camelcase": "off"
     },
     "settings": {
         "import/resolver": {
